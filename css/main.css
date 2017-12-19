@@ -1,7 +1,6 @@
 * {
   /* background-color: rgba(0, 0, 0, .1); */
   box-sizing: border-box;
-  color: #776e65
 }
 
 button {
@@ -16,6 +15,7 @@ button {
 }
 
 h1.title {
+  color: #776e65;
   font-size: 80px;
   font-weight: bold;
   margin: 0;
@@ -24,7 +24,6 @@ h1.title {
 }
 
 .score-container {
-  display: inline-block;
   background: #bbada0;
   padding: 15px 25px;
   font-size: 25px;
@@ -43,6 +42,7 @@ h1.title {
 }
 
 .game-intro {
+  color: #776e65;
   margin-top: 0;
   float: left;
   line-height: 40px;
