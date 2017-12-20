@@ -127,7 +127,7 @@ h1.title {
   height: 107.5px;
   border-radius: 3px;
   transition-property: transform;
-  transition-duration: 200ms;
+  transition-duration: 100ms;
 }
 
 .tile.tile-position-0-0 {
@@ -314,7 +314,7 @@ h1.title {
 }
 
 .tile-new .inner-val {
-  animation: pop 200ms linear;
+  animation: pop 100ms linear;
 }
 
 
@@ -334,5 +334,5 @@ h1.title {
 
 .tile-merged .inner-val {
   z-index: 20;
-  animation: popup 200ms linear;
+  animation: popup 100ms linear;
 }

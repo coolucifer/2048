@@ -192,9 +192,9 @@ var right = function () {
 };
 
 init();
-// randNum();
-// randNum();
-board[0][1]=2;
-board[0][2]=4;
-board[0][3]=2;
+randNum();
+randNum();
+// board[0][1]=2;
+// board[0][2]=4;
+// board[0][3]=2;
 $("#main").html(board[0]+"<br>"+board[1]+"<br>"+board[2]+"<br>"+board[3]+"<br>");
