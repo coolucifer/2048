@@ -5,16 +5,20 @@
   cursor: default;
 }
 
-button
-/* ,
-button:hover */
+p {
+  color: #776e65;
+  margin: 0;
+  line-height: 25px;
+}
 
-{
-  width: 150px;
+button,
+button:focus {
+  /* width: 150px; */
   height: 50px;
   border-radius: 3px;
   display: block;
   border: #8f7a66;
+  outline: none;
   background: #8f7a66;
   cursor: pointer;
   color: #f9f6f2;
@@ -57,12 +61,12 @@ h1.title {
 }
 
 .game-intro {
-  color: #776e65;
-  margin-top: 0;
   float: left;
   line-height: 40px;
-  margin-bottom: 0;
-  ;
+}
+
+.game-intro p {
+  margin-top: 12.5px;
 }
 
 .above-game:after {
@@ -72,8 +76,8 @@ h1.title {
 }
 
 .new-game {
-  width: 129px;
-  height: 40px;
+  width: 134px;
+  /* height: 40px; */
   float: right;
 }
 
