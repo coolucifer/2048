@@ -1,12 +1,27 @@
 * {
   /* background-color: rgba(0, 0, 0, .1); */
   box-sizing: border-box;
+  user-select: none;
+  cursor: default;
 }
 
-button {
+button
+/* ,
+button:hover */
+
+{
   width: 150px;
   height: 50px;
   border-radius: 3px;
+  display: block;
+  border: #8f7a66;
+  background: #8f7a66;
+  cursor: pointer;
+  color: #f9f6f2;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .container {
@@ -37,7 +52,7 @@ h1.title {
   float: right;
 }
 
-#score{
+#score {
   padding-top: 7px;
 }
 
@@ -56,25 +71,15 @@ h1.title {
   clear: both;
 }
 
-.new-game,
-.new-game:hover {
-  display: block;
+.new-game {
   width: 129px;
   height: 40px;
-  border-radius: 3px;
-  border: #8f7a66;
-  background: #8f7a66;
-  cursor: pointer;
-  color: #f9f6f2;
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
   float: right;
 }
 
 .game-container {
-  z-index: -1;
+  position: relative;
+  /* z-index: -1; */
   width: 500px;
   height: 500px;
   margin-top: 40px;
@@ -109,6 +114,34 @@ h1.title {
   margin-right: 0;
 }
 
+.show-result {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(238, 228, 218, 0.73);
+  border-radius: 6px;
+  /* padding-top: 200px; */
+}
+
+.show-result p {
+  color: #776e65;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.show-result * {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* ------------------tiles---------------------- */
 
@@ -127,7 +160,7 @@ h1.title {
   height: 107.5px;
   border-radius: 3px;
   transition-property: transform;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
 }
 
 .tile.tile-position-0-0 {
@@ -198,6 +231,7 @@ h1.title {
 /* ---------------------------val--------------------- */
 
 .inner-val {
+  border-radius: 3px;
   font-weight: bold;
   text-align: center;
   display: flex;
@@ -314,7 +348,7 @@ h1.title {
 }
 
 .tile-new .inner-val {
-  animation: pop 100ms linear;
+  animation: pop 200ms linear;
 }
 
 
@@ -334,5 +368,5 @@ h1.title {
 
 .tile-merged .inner-val {
   z-index: 20;
-  animation: popup 100ms linear;
+  animation: popup 200ms linear;
 }
