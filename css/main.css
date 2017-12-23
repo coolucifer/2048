@@ -118,6 +118,15 @@ h1.title {
   margin-right: 0;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .73;
+  }
+}
+
 .show-result {
   z-index: 100;
   position: absolute;
@@ -129,6 +138,7 @@ h1.title {
   align-items: center;
   background: rgba(238, 228, 218, 0.73);
   border-radius: 6px;
+  animation: fadeIn 500ms linear;
   /* padding-top: 200px; */
 }
 
