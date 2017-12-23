@@ -6,65 +6,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>2048</title>
-  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"> -->
+  <link rel="shortcut icon" href="https://coolucifer.github.io/favicon.png" type="image/x-icon">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+  <link href="https://coolucifer.github.io/css/atom-one-dark.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://coolucifer.github.io/css/main.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">2048</h1>
-      <div class="score-container">
-        SCORE
-        <div id="score"></div>
+<body data-spy="scroll" data-target=".side-bar">
+  <!-- fix-height用来处理navbar-fixed-top没有高度的问题 -->
+  <div class="fix-height">
+    <nav class="navbar navbar-fixed-top shadowbox" id="anchor">
+      <div class="container">
+        <!-- <a class="nav-item" id="mainpage" type="button" @click="onClick" href="https://coolucifer.github.io/">首页 </a>
+        <a class="nav-item" id="showblog" type="button" @click="onClick" href="#anchor">&nbsp;blog </a>
+        <a class="nav-item" id="showpractices" type="button" @click="onClick" href="https://coolucifer.github.io/">&nbsp;小练习</a> -->
+        <a class="nav-item" id="mainpage" href="https://coolucifer.github.io">首页 </a>
+        <a class="nav-item" id="showblog" href="https://coolucifer.github.io/#/blog">&nbsp;blog </a>
+        <a class="nav-item" id="showpractices" href="https://coolucifer.github.io/#/practices">&nbsp;小练习</a>
       </div>
-    </div>
-    <div class="above-game">
-      <!-- <p class="game-intro">Use arrow button to move the tiles!</p> -->
-      <div class="game-intro">
-        <p>Join the numbers and get to the 
-          <strong>2048 tile!</strong></p>
+    </nav>
+  </div>
+  <div class="mainpanel">
+    <div class="contain clearfix">
+      <div class="main-column shadowbox">
+        <div id="blog">
+          <div class="blog-content">
+            <div class="heading">
+              <h1 class="title">2048</h1>
+              <div class="score-container">
+                SCORE
+                <div id="score"></div>
+              </div>
+            </div>
+            <div class="above-game">
+              <!-- <p class="game-intro">Use arrow button to move the tiles!</p> -->
+              <div class="game-intro">
+                <p>Join the numbers and get to the
+                  <strong>2048 tile!</strong>
+                </p>
+              </div>
+              <button class="new-game" onclick="init()">New Game</button>
+            </div>
+            <div class="game-container">
+              <div class="grid-container">
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+              </div>
+              <div class="tile-container">
+              </div>
+            </div>
+            <div class="how-to-play">
+              <p style="font-size:17px">
+                <strong>HOW TO PLAY:</strong> Use your arrow keys to move the tiles. When two tiles with the same number touch, they
+                merge into one!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="btn new-game" onclick="init()">New Game</button>
-    </div>
-    <div class="game-container">
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
+      <div class="outline">
+        <div class="side-bar affix-top shadowbox" data-spy="affix">
+          <div class="avatar"></div>
+          <div class="contact list-group">
+            <a class="list-group-item" href="https://github.com/coolucifer/2048" target="_blank">
+              <img src="https://coolucifer.github.io/img/github-logo-b.png" /> GitHub源码
+            </a>
+            <a class="list-group-item" href="mailto:1045606768@qq.com">
+              <img src="https://coolucifer.github.io/img/email.png" /> Mail-to</a>
+            <a class="list-group-item" href="http://wpa.qq.com/msgrd?v=3&uin=1045606768&site=qq&menu=yes" target="_blank">
+              <img src="https://coolucifer.github.io/img/qq-penguin-shape.png" /> QQ</a>
+          </div>
         </div>
       </div>
-      <div class="tile-container">
-      </div>
-    </div>
-    <div class="how-to-play">
-      <p style="font-size:17px">
-        <strong>HOW TO PLAY:</strong> Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!
-      </p>
     </div>
   </div>
 
-  <script src="./js/jquery.js"></script>
+  <!-- <footer class="shadowbox">footerfooterfooter</footer> -->
+
+  <!-- <script src="./node_modules/jquery/dist/jquery.js"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+  <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+  <!-- <script src="./node_modules/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.bootcss.com/vue/2.5.3/vue.js"></script>
+  <script src="https://coolucifer.github.io/js/highlight.pack.js"></script>
+  <script src="https://coolucifer.github.io/js/main.js"></script>
   <script src="./js/keyboard-monitor.js"></script>
   <script src="./js/main.js"></script>
 </body>

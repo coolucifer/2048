@@ -9,6 +9,7 @@ p {
   color: #776e65;
   margin: 0;
   line-height: 25px;
+  font-size: 16px;
 }
 
 button,
@@ -28,7 +29,7 @@ button:focus {
   font-weight: bold;
 }
 
-.container {
+.blog-content {
   width: 500px;
   margin: 0 auto;
 }
@@ -44,9 +45,9 @@ h1.title {
 
 .score-container {
   background: #bbada0;
-  padding: 15px 25px;
+  padding: 10px 25px;
   font-size: 25px;
-  height: 80px;
+  height: 70px;
   line-height: 25px;
   font-weight: bold;
   border-radius: 3px;
@@ -57,7 +58,7 @@ h1.title {
 }
 
 #score {
-  padding-top: 7px;
+  padding-top: 5px;
 }
 
 .game-intro {
