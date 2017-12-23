@@ -25,11 +25,13 @@ var init = function () {
   $(".show-result").remove();
   showMatirx();
   generateNewNumbers(2);
-  setInterval(function () { //每500ms检测是否胜利或失败
+  var checkResult = setInterval(function () { //每500ms检测是否胜利或失败
     if (isWin()) {
       gameResult(0); //胜利
+      clearInterval(checkResult);
     } else if (isDead()) {
       gameResult(1); //失败
+      clearInterval(checkResult);
     }
   }, 500);
 
