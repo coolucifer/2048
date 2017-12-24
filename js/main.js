@@ -26,7 +26,7 @@ var init = function () {
   showMatirx();
   generateNewNumbers(2);
   var checkResult = setInterval(function () { //每500ms检测是否胜利或失败
-    if (isWin()) {
+    if (isWon()) {
       gameResult(0); //胜利
       clearInterval(checkResult);
     } else if (isDead()) {
@@ -279,15 +279,15 @@ var isDead = function () {
       } else if (j - 1 >= 0 && board[i][j] === board[i][j - 1]) {
         return false;
       } else if (j + 1 < len && board[i][j] === board[i][j + 1]) {
-        return false
+        return false;
       }
     }
   }
   return true;
 };
 
-//--------------------isWin-----------------------
-var isWin = function () {
+//--------------------isWon-----------------------
+var isWon = function () {
   for (var i = 0; i < len; i++) {
     for (var j = 0; j < len; j++) {
       if (board[i][j] === goal) {
